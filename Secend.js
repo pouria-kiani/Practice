@@ -381,9 +381,14 @@
 // ?تاریخ تولد کاربر را بگیرید و سن کار بر را حساب کرده و نمایش دهید
 let userInput = +prompt("زمان مورد نظر را به دقیقه وارد کنید");
 let userBirthday = +prompt("سن خود را وارد کنید", "1370");
-let userAge = 1402 - userBirthday;
-if (userAge < 1) {
-  console.log("سن وارد شده صحیح نمی باشد");
+let userAge = null;
+if (userBirthday) {
+  userAge = 1402 - userBirthday;
+  if (userAge < 1) {
+    console.log("سن وارد شده صحیح نمی باشد");
+  }
+} else if (userAge == null) {
+  console.log("مقداری برای محاسبه وجود ندارد");
 } else {
   console.log("your Age is :" + " " + userAge);
 }
