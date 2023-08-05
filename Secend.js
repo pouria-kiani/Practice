@@ -329,3 +329,67 @@
 // let capchaNumber = +prompt(`olgoe adadi ra vared namaid : ${capchaTemplate}`);
 
 // capchaNumber === capchaTemplate ? console.log("its ok") : console.log("not ok");
+
+// let userInput = prompt("enter your product name");
+// let list = [
+//   {
+//     name: "benz",
+//     model: "c200",
+//     price: "48000$",
+//   },
+//   {
+//     name: "bmw",
+//     model: "z4",
+//     price: "45000$",
+//   },
+// ];
+// let product = null;
+// for (let i = 0; i < list.length; i++) {
+//   if (userInput === list[i].name) {
+//     product = list[i];
+//     break;
+//   }
+// }
+// if (product) {
+//   console.log(product);
+// } else {
+//   console.log("we dont have your product");
+// }
+// let userInput = prompt("moshkelat khod ra tizih dahid");
+// let userInputConcat = userInput + " n";
+// let userInputArray = userInputConcat.match(/\b(\w+\W+)/g);
+// console.log(userInputArray);
+// let badWord = [
+//   "kir",
+//   "kos",
+//   "kon",
+//   "koskesh",
+//   "binamos",
+//   "koni",
+//   "kiri",
+//   "tokhme sag",
+//   "madar jendeh",
+//   "shol namos",
+//   "kir goz",
+// ];
+// for (let i = 0; i < userInputArray.length; i++) {
+//   if () {
+//   }
+// }
+///////////////////////////////////////////////////////////
+// ? یک زمان را بر حسب دقیقه از کاربر دریافت کرده و آن را به ساعت تبدیل کنید و سپس نمایش دهید
+// ?تاریخ تولد کاربر را بگیرید و سن کار بر را حساب کرده و نمایش دهید
+let userInput = +prompt("زمان مورد نظر را به دقیقه وارد کنید");
+let userBirthday = +prompt("سن خود را وارد کنید", "1370");
+let userAge = 1402 - userBirthday;
+if (userAge < 1) {
+  console.log("سن وارد شده صحیح نمی باشد");
+} else {
+  console.log("your Age is :" + " " + userAge);
+}
+let converetUserInput = userInput / 60;
+if (converetUserInput < 1) {
+  console.log("زمان وارد شده صحیح نمیباشد");
+} else {
+  console.log(Math.floor(converetUserInput) + ` ${"Hour"}`);
+}
