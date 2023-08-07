@@ -379,22 +379,39 @@
 ///////////////////////////////////////////////////////////
 // ? یک زمان را بر حسب دقیقه از کاربر دریافت کرده و آن را به ساعت تبدیل کنید و سپس نمایش دهید
 // ?تاریخ تولد کاربر را بگیرید و سن کار بر را حساب کرده و نمایش دهید
-let userInput = +prompt("زمان مورد نظر را به دقیقه وارد کنید");
-let userBirthday = +prompt("سن خود را وارد کنید", "1370");
+// let userInput = +prompt("زمان مورد نظر را به دقیقه وارد کنید");
+// let userBirthday = +prompt("سن خود را وارد کنید", "1370");
+// let userAge = null;
+// if (userBirthday) {
+//   userAge = 1402 - userBirthday;
+//   if (userAge < 1) {
+//     console.log("سن وارد شده صحیح نمی باشد");
+//   }
+// } else if (userAge == null) {
+//   console.log("مقداری برای محاسبه وجود ندارد");
+// } else {
+//   console.log("your Age is :" + " " + userAge);
+// }
+// let converetUserInput = userInput / 60;
+// if (converetUserInput < 1) {
+//   console.log("زمان وارد شده صحیح نمیباشد");
+// } else {
+//   console.log(Math.floor(converetUserInput) + ` ${"Hour"}`);
+// }
+/////////////////////////////////////////////
+/*
+?از کاربر سن و جنسیت را دریافت کنید.
+?در صورتی که جنسیت کاربر مونث بوده یا سن کمتر از 18 را دارد، به اون خطا نمایش داده
+?و در غیر این صورت به اون مجوز ورود به پنل را نمایش دهید.
+*/
+let userBirthDay = +prompt("سن خود رافقط سالش را وارد کنید", "1358");
+let userGenderInput = prompt("جنسیت خود را وارد کنید", "male or female");
 let userAge = null;
-if (userBirthday) {
-  userAge = 1402 - userBirthday;
-  if (userAge < 1) {
-    console.log("سن وارد شده صحیح نمی باشد");
-  }
-} else if (userAge == null) {
-  console.log("مقداری برای محاسبه وجود ندارد");
+userAge = 1402 - userBirthDay;
+if (userAge < 18 || userGenderInput === "female") {
+  console.log("شما مجاز به ورود نیستید");
+} else if (userAge > 18 && userGenderInput === "male") {
+  console.log("به سایت خودتون خوش امدید");
 } else {
-  console.log("your Age is :" + " " + userAge);
-}
-let converetUserInput = userInput / 60;
-if (converetUserInput < 1) {
-  console.log("زمان وارد شده صحیح نمیباشد");
-} else {
-  console.log(Math.floor(converetUserInput) + ` ${"Hour"}`);
+  console.log("ورودی را درست وارد کنید");
 }
